@@ -1,8 +1,3 @@
-import kem as kem
-
-result = []
-
-
 def divider(a: object, b: object) -> object:
     if a < b:
         raise ValueError
@@ -10,10 +5,11 @@ def divider(a: object, b: object) -> object:
         raise IndexError
     return a / b
 
-
-data = [10, 2, 2, 5, "123", 4, 18, 0, [], 15, 8, 4]
+result = []
+data = {10: 2, 2: 5, "123": 4, 18: 0, []: 15, 8: 4}
 for key in data:
-    res = divider(key, data, kem)
+    res = divider(key, data [key])
     result.append(res)
+    break
 
 print(result)
